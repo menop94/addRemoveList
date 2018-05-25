@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="Stylesheets/style.css">
+	<script src="Scripts/myScript.js"></script>
+	<title>AddRemove</title>
+</head>
+<body onload="showEmployees()">
+	<h1>Angajeati SteamBar</h1>
+	<article>
+		<img src="Images/background.png" alt="SteamMan">
+		<article class="employeeTable">
+			<input type="text" id="newEmployee" placeholder="Angajat nou?">
+			<span onclick="addEmployee()" id="add">Angajat!</span>
+			<br><br><br>
+			<table id="table"></table>
+			<br>
+			<span onclick="deleteEmployees()" id="delete">Concediaza angajatii!</span>
+			<br>
+		</article>
+	</article>
+</body>
+</html>

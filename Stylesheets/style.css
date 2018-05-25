@@ -1,0 +1,87 @@
+body{
+	background: linear-gradient(to right, white, grey);
+}
+h1{
+	text-align: center;
+	font-size: 50px;
+	font-weight: bold;
+}
+img{
+	max-width: 300px;
+	display: inline;
+	float:left;
+}
+tr{
+	cursor: pointer;
+    position: relative;
+    /*padding: 12px 8px 12px 40px;*/
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    font-color:black;
+    border-style: solid;
+	border-color: grey;
+	border-collapse: all;
+	border-width: 5px;
+}
+table tr:nth-child(odd){
+	background: #F9F9F9;
+	font-color:black;
+}
+.employeeTable{
+	/*background-color: #f44336;*/
+    padding: 30px 40px;
+    margin-left: 300px;
+    color: black;
+    text-align: center;
+}
+table{
+	display: block;
+	font-size: 39px;
+	text-align: left;
+}
+td{
+	font-size: 39px;
+}
+#add,#delete,#newEmployee{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#newEmployee, #modifyEmployee {
+    border: none;
+    width: 70%;
+    padding: 10px;
+    float: left;
+    font-size: 24px;
+}
+#add{
+	padding: 10px;
+    width: 25%;
+}
+#add {
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#delete{
+	padding: 10px;
+	background: grey;
+	color:white;
+	float:left;
+	font-size: 24px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.editButton{
+	background: grey;
+	color: white;
+	max-width: 50px;
+}
+#add:hover {
+    background-color: #bbb;
+}
