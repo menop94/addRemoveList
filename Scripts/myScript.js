@@ -1,14 +1,17 @@
 var employeeList=["Dobai Andrei", "Corb Stefan", "Somehow Ciprian"];
+function showOneEmployee(x){
+	var table=document.getElementById("table");
+	var newRow=table.insertRow(x);
+	var cell1=newRow.insertCell(0);
+	var cell2=newRow.insertCell(1);
+	var cell3=newRow.insertCell(2);
+	cell3.innerHTML='<img src="Images/edit.png" alt="schimba numele" onclick="editEmployee('+x+')" class="editButton">';
+	cell1.innerHTML='<input type="checkbox"/>';
+	cell2.innerHTML=employeeList[x];
+}
 function showEmployees() {
 	for(i=0;i<employeeList.length;i++){
-		var table=document.getElementById("table");
-		var newRow=table.insertRow(i);
-		var cell1=newRow.insertCell(0);
-		var cell2=newRow.insertCell(1);
-		var cell3=newRow.insertCell(2);
-		cell3.innerHTML='<img src="Images/edit.png" alt="schimba numele" onclick="editEmployee('+i+')" class="editButton">';
-		cell1.innerHTML='<input type="checkbox"/>';
-		cell2.innerHTML=employeeList[i];
+		showOneEmployee(i);
 	}
 }
 function reloadEmployees(){
@@ -41,15 +44,8 @@ function addEmployee(){
 		alert("Nu angajam no-name");
 	}
 	else{
-		var table=document.getElementById("table");
-		var newRow=table.insertRow(employeeList.length);
 		employeeList.push(name);
-		var cell1=newRow.insertCell(0);
-		var cell2=newRow.insertCell(1);
-		var cell3=newRow.insertCell(2);
-		cell3.innerHTML='<img src="Images/edit.png" onclick="editEmployee('+employeeList.length+')" class="editButton">';
-		cell1.innerHTML='<input type="checkbox"/>';
-		cell2.innerHTML=name;
+		showOneEmployee(employeeList.length - 1);
 	}
 	document.getElementById("newEmployee").value="";
 }
